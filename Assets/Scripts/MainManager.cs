@@ -71,6 +71,11 @@ public class MainManager : MonoBehaviour
     public void GameOver()
     {
         m_GameOver = true;
+        GameManager.Instance.SaveBestScore(m_Points);
         GameOverText.SetActive(true);
+    }
+    public void BacktoMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
