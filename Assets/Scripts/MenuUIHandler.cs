@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -27,10 +27,10 @@ public class MenuUIHandler : MonoBehaviour
     }
     public void QuitGame()
     {
-#if UNITY_EDITOR
+#if UNITY_EDITOR // editörde isek çalışır
         UnityEditor.EditorApplication.isPlaying = false;
-#else
+#else // editörde değilsek çalışır
         Application.Quit();
-#endif
+#endif // şartı sonlandırır.
     }
 }
